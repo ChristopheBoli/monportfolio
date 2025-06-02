@@ -20,8 +20,8 @@ const slides = [
           <h3 className="font-semibold">Responsable Informatique – Science de chez nous</h3>
           <p className="text-gray-500 text-sm flex items-center"><FiMapPin className="mr-1" /> Bamako | 2022 – Présent</p>
           <ul className="list-disc pl-5 mt-2 space-y-1 text-gray-700">
-            <li>Développement et gestion de plateformes web éducatives</li>
-            <li>Conception d'outils internes sur mesure (stock, contenu)</li>
+            <li>Développement et gestion de plateformes web</li>
+            <li>Conception d'outils internes sur mesure (contenu)</li>
             <li>Maintenance et amélioration continue des systèmes</li>
           </ul>
         </div>
@@ -39,7 +39,7 @@ const slides = [
           <h3 className="font-semibold">Développeur Junior – SEVOB SARL</h3>
           <p className="text-gray-500 text-sm flex items-center"><FiMapPin className="mr-1" /> En ligne | 2021</p>
           <ul className="list-disc pl-5 mt-2 space-y-1 text-gray-700">
-            <li>Développement de solutions web en PHP et JavaScript</li>
+            <li>Développement de solutions web en Spring Boot et React Js</li>
             <li>Collaboration en équipe agile</li>
           </ul>
         </div>
