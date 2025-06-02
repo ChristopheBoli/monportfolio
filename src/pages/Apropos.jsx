@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiChevronLeft, FiChevronRight, FiUser, FiBriefcase, FiAward, FiMapPin, FiBook, FiGlobe, FiPhone, FiMail } from 'react-icons/fi';
-
+import photo1 from '/src/assets/photo1.jpg';
+import photo2 from '/src/assets/photo2.jpg';
 const slides = [
   {
     id: 1,
     title: "Christophe Boli",
     subtitle: "Développeur Full-Stack",
     description: "Développeur passionné par les technologies Web et mobiles, je suis à la recherche d’un poste stimulant en tant que développeur full-stack ou mobile. Mon objectif est de contribuer activement à des projets innovants tout en consolidant mes compétences techniques sur le terrain, dans le but d’évoluer vers des postes à responsabilité.",
-    image: "/photo1.jpg"
+    image: photo1
   },
   {
     id: 2,
@@ -44,7 +45,7 @@ const slides = [
         </div>
       </div>
     ),
-    image: "/photo2.jpg"
+    image: photo2
   },
   {
     id: 3,
@@ -76,7 +77,7 @@ const slides = [
         </div>
       </div>
     ),
-    image: "/photo1.jpg"
+    image: photo1
   },
   {
     id: 4,
@@ -118,7 +119,7 @@ const slides = [
         </div>
       </div>
     ),
-    image: "/photo2.jpg"
+    image: photo2
   }
 ];
 

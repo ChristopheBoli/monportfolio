@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import SideBar from './pages/sidebar/SideBar';
-import NavBar from './pages/sidebar/NavBar';
-import Competences from './pages/Competences';
-import Apropos from './pages/Apropos';
-import Projects from './pages/Projects';
-import Blog from './pages/Blog';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import SideBar from "./pages/sidebar/SideBar";
+import NavBar from "./pages/sidebar/NavBar";
+import Competences from "./pages/Competences";
+import Apropos from "./pages/Apropos";
+import Projects from "./pages/Projects";
+import Blog from "./pages/Blog";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 function TypewriterEffect() {
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
@@ -17,31 +17,30 @@ function TypewriterEffect() {
     "Bienvenue sur mon portfolio",
     "Je suis Christophe Boli",
     "Développeur Web & Mobile",
-    "Explorez mes compétences et projets"
+    "Explorez mes compétences et projets",
   ];
 
   useEffect(() => {
-    const handleTyping = () => {
-      const currentPhrase = phrases[loopNum % phrases.length];
-      
-      setText(isDeleting 
-        ? currentPhrase.substring(0, text.length - 1)
-        : currentPhrase.substring(0, text.length + 1)
-      );
+    const i = loopNum % phrases.length;
+    const fullText = phrases[i];
 
-      setTypingSpeed(isDeleting ? 30 : 150);
-
-      if (!isDeleting && text === currentPhrase) {
-        setTimeout(() => setIsDeleting(true), 1000);
-      } else if (isDeleting && text === '') {
-        setIsDeleting(false);
-        setLoopNum(loopNum + 1);
+    const timer = setTimeout(() => {
+      if (isDeleting) {
+        setText((prev) => fullText.substring(0, prev.length - 1));
+      } else {
+        setText((prev) => fullText.substring(0, prev.length + 1));
       }
-    };
 
-    const timer = setTimeout(handleTyping, typingSpeed);
+      if (!isDeleting && text === fullText) {
+        setTimeout(() => setIsDeleting(true), 1000);
+      } else if (isDeleting && text === "") {
+        setIsDeleting(false);
+        setLoopNum((prev) => prev + 1);
+      }
+    }, typingSpeed);
+
     return () => clearTimeout(timer);
-  }, [text, isDeleting, loopNum, typingSpeed, phrases]);
+  }, [text, isDeleting, loopNum]);
 
   return (
     <div className="flex flex-col items-center justify-center h-full">
@@ -50,7 +49,7 @@ function TypewriterEffect() {
         <span className="animate-pulse">|</span>
       </h1>
       <p className="text-lg text-gray-600 max-w-md text-center">
-        Naviguez à travers les différentes sections pour découvrir mon travail et mes compétences.
+        Naviguez à travers les différentes sections pour découvrir mon travail.
       </p>
     </div>
   );
@@ -70,9 +69,9 @@ function Home() {
       {/* Section droite */}
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Navbar horizontale */}
-        <NavBar 
-          showSidebarContent={showSidebarContent} 
-          setShowSidebarContent={setShowSidebarContent} 
+        <NavBar
+          showSidebarContent={showSidebarContent}
+          setShowSidebarContent={setShowSidebarContent}
         />
 
         {/* Contenu dynamique */}
@@ -89,6 +88,7 @@ function Home() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/" element={<TypewriterEffect />} />
+              <Route path="*" element={<TypewriterEffect />} />
             </Routes>
           )}
         </main>

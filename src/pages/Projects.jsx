@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiChevronLeft, FiChevronRight, FiGithub, FiExternalLink } from 'react-icons/fi';
+import infhonnete from '/src/assets/infhonnete.png'
+import sciencesdecheznous from '/src/assets/sciencesdecheznous.png'
+import dagaba from '/src/assets/dagaba.png'
+import gstore from '/src/assets/gstore.png'
+import emobili from '/src/assets/emobili.png'
 
 const projects = [
   {
@@ -8,7 +13,7 @@ const projects = [
     title: "Infhonnete.com",
     description: "Plateforme de vérification d'informations et de lutte contre les fake news au Mali.",
     technologies: ["WordPress", "HTML", "JavaScript", "CSS"],
-    image: "/infhonnete.png", // Remplacez par votre image
+    image: infhonnete, // Remplacez par votre image
     links: [
       { icon: <FiExternalLink />, url: "https://infhonnete.com" }
     ]
@@ -18,7 +23,7 @@ const projects = [
     title: "Sciencesdecheznous.com",
     description: "Plateforme d'informations scientifiques et technologiques pour le public malien.",
     technologies: ["WordPress", "HTML", "JavaScript", "CSS"],
-    image: "/sciencesdecheznous.png", // Remplacez par votre image
+    image: sciencesdecheznous, // Remplacez par votre image
     links: [
       { icon: <FiExternalLink />, url: "https://sciencesdecheznous.com" }
     ]
@@ -28,7 +33,7 @@ const projects = [
     title: "Gestion de Stock - Pharmacie DAGABA",
     description: "Solution complète de gestion de stock pour pharmacie avec alertes et rapports.",
     technologies: ["Spring Boot", "JavaScript", "SQLite", "Electron Js"],
-    image: "/dagaba.png", // Remplacez par votre image
+    image: dagaba, // Remplacez par votre image
     links: [
       { icon: <FiGithub />, url: "#" } // Ajoutez votre lien GitHub si disponible
     ]
@@ -38,7 +43,7 @@ const projects = [
     title: "Gestion de Stock - Web et mobile",
     description: "Solution complète de gestion de stock pour petites et moyennes entreprises avec alertes et rapports.",
     technologies: ["Spring Boot", "JavaScript", "SQLite", "Electron Js"],
-    image: "/gstore.png", // Remplacez par votre image
+    image: gstore, // Remplacez par votre image
     links: [
       { icon: <FiGithub />, url: "#" } // Ajoutez votre lien GitHub si disponible
     ]
@@ -48,7 +53,7 @@ const projects = [
     title: "E-mobili",
     description: "Application de gestion de parc automobile avec suivi des véhicules.",
     technologies: ["React JS", "Spring Boot", "En cours de développement"],
-    image: "/emobili.png", // Remplacez par votre image
+    image: emobili, // Remplacez par votre image
     links: [
       { icon: <FiGithub />, url: "#" }, // Ajoutez votre lien GitHub si disponible
       { icon: <FiExternalLink />, url: "#" } // Ajoutez le lien de démo si disponible
@@ -59,7 +64,7 @@ const projects = [
     title: "Partage de fichiers en réseau local",
     description: "Solution de partage de fichiers sécurisée en réseau local sans internet.",
     technologies: ["Java", "Socket Programming", "En cours de développement"],
-    image: "/fileshare.jpg", // Remplacez par votre image
+    image: "./fileshare.jpg", // Remplacez par votre image
     links: [
       { icon: <FiGithub />, url: "#" } // Ajoutez votre lien GitHub si disponible
     ]
@@ -69,7 +74,7 @@ const projects = [
     title: "Application de suivi parental",
     description: "Application de suivi permettant la surveillance en temps réel des mineurs par leur parents.",
     technologies: ["Java", "XML", "En cours de développement"],
-    image: "/fileshare.jpg", // Remplacez par votre image
+    image: "./fileshare.jpg", // Remplacez par votre image
     links: [
       { icon: <FiGithub />, url: "#" } // Ajoutez votre lien GitHub si disponible
     ]

@@ -7,6 +7,7 @@ import {
   FaLinkedin,
   FaTimes
 } from 'react-icons/fa';
+import photo1 from '/src/assets/photo1.jpg';
 
 function SideBar({ onClose }) {
   return (
@@ -27,7 +28,7 @@ function SideBar({ onClose }) {
         {/* Photo avec marge en haut */}
         <div className="mt-8 mb-6">
           <img 
-            src="/photo1.jpg" 
+            src={photo1}
             alt="Profil" 
             className="w-36 h-36 rounded-full mx-auto object-cover border-2 border-gray-200"
           />
